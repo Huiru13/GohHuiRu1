@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GohHuiRu1</string>
+    <string name="screen">Screen</string>
+    <string name="confirm">Confirm</string>
+    <string name="book">Available</string>
+    <string name="reserved">Reserved</string>
+    <string name="booked">Booked</string>
+</resources>

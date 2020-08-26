@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="232dp"
+        android:layout_height="20dp"
+        android:text="@string/screen"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="-152dp">
+
+        <HorizontalScrollView
+            android:id="@+id/layoutSeat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/bookt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="@string/book"
+        app:layout_constraintBottom_toTopOf="@id/book"
+        app:layout_constraintStart_toStartOf="@id/book" />
+
+    <ImageView
+        android:id="@+id/book"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_seats_book"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/booked"
+        app:tint="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/reservedt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="@string/reserved"
+        app:layout_constraintBottom_toTopOf="@id/reserved"
+        app:layout_constraintStart_toStartOf="@id/reserved" />
+
+    <ImageView
+        android:id="@+id/reserved"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_seats_reserved"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@id/booked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/bookedt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="@string/booked"
+        app:layout_constraintBottom_toTopOf="@id/reserved"
+        app:layout_constraintEnd_toEndOf="@id/booked" />
+
+    <ImageView
+        android:id="@+id/booked"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_seats_booked"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@android:color/holo_red_light" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="confirm"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
