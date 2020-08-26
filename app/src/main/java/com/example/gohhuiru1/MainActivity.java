@@ -6,6 +6,8 @@ import androidx.core.content.ContextCompat;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -204,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         layout.addView(view);
                         seatViewList.add(view);
                         view.setOnClickListener(MainActivity.this);
-                        seats = seats.substring(0, index) + 'U' + seats.substring(index + 1);
+                        //seats = seats.substring(0, index) + 'U' + seats.substring(index + 1);
                     } else if (seats.charAt(index) == '_') {
                         TextView view = new TextView(MainActivity.this);
                         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(seatSize, seatSize);
@@ -238,6 +240,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 view.setBackgroundColor(Color.GREEN);
                 Toast.makeText(this, "Seat " + view.getId() + " is Selected", Toast.LENGTH_SHORT).show();
                 countSelect = view.getId();
+                //int n = view.getId();
+                //String n2 = seats = seats.substring(0, n-1) + 'C' + seats.substring(n);
+                //Toast.makeText(this, seats, Toast.LENGTH_SHORT).show();
             }
         } else if ((int) view.getTag() == STATUS_BOOKED) {
             Toast.makeText(this, "Seat " + view.getId() + " is Booked", Toast.LENGTH_SHORT).show();
@@ -247,6 +252,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void confirm(View view) {
-        Toast.makeText(this, "You already select seat " + countSelect, Toast.LENGTH_SHORT).show();
+        /*
+        //Toast.makeText(this, "You already select seat " + countSelect, Toast.LENGTH_SHORT).show();
+        String newSeat = "";
+        for (int index = 0; index < count; index++) {
+            String sID = String.valueOf(index);
+            int ID = getResources().getIdentifier(sID, "id", getPackageName());
+            TextView t = (TextView)findViewById(ID);
+            String s = t.getText().toString();
+            Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
+            //String z = seatViewList.get(index).getText().toString();
+            //Toast.makeText(this,z,Toast.LENGTH_SHORT).show();
+            //layoutSeat.getChildAt(0).getLayoutParams().toString();
+            if(seats.charAt(index) == '/'){
+                newSeat += "/";
+            }
+        }
+        int a = layoutGroup.getChildCount();
+        int b = layoutSeat.getChildCount();
+        int c = layout.getChildCount();
+        int d = seatViewList.size();
+
+
+        Toast.makeText(this, a+"\n"+b+"\n"+c+"\n"+d , Toast.LENGTH_SHORT).show();*/
+        //Toast.makeText(this,z,Toast.LENGTH_SHORT).show();
     }
 }
