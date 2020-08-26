@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1071653384656",
+    "firebase_url": "https://test-seat-b546d.firebaseio.com",
+    "project_id": "test-seat-b546d",
+    "storage_bucket": "test-seat-b546d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071653384656:android:ad07279a648bf506a789d5",
+        "android_client_info": {
+          "package_name": "com.example.gohhuiru1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071653384656-c76bi78v2v6j4knk5ablh507ook2e8qe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8NKG7YYpp9SZbj2MBqFpaui5RrBu0APg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071653384656-c76bi78v2v6j4knk5ablh507ook2e8qe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
